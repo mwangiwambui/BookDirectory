@@ -48,3 +48,17 @@ router.put('/books/:id', async function(req, res){
   await bookModel.updateOne({isbn: id}, {$set :{title: updatedBook.title, author: updatedBook.authors}})
   res.status(200).send("Book Updated");
 });
+
+router.delete('books/:id', async function (req, res){
+  const {id} = req.params;
+  const bookExist = await bookModel.findOne({isbn: id});
+  if (!bookExist) return res.send('Book does not exist');
+
+  await bookModel.deleteOne({isbn: id}).then(function(){
+    console.log("Data deleted") //Success
+    res.send("Book record deleted successfully")}).catch(function(error){
+      console.log(error);
+    });
+  });
+
+  module.export = router;
