@@ -14,10 +14,8 @@
 * Book Directory
   - Developed in Node js to learn the key concepts of creating routers
   - Modules used are: Express, body-Parser, mongoose, nodemon
-* Sync Scrolling
-  - While you type, LivePreview will automatically scroll to the current location you're editing.
 * Postman collection containing the APIs.
-* Uses mongo db to store data in the database.
+* Used mongo db to store data in the database.
 
 ## How To Use
 
