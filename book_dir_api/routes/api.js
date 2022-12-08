@@ -60,5 +60,4 @@ router.delete('books/:id', async function (req, res){
       console.log(error);
     });
   });
-
-  module.export = router;
+module.exports = router;
